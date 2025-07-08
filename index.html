@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe Game with Gestures</title>
+    <style>
+      #board {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+        gap: 5px;
+        margin-top: 20px;
+      }
+      .cell {
+        width: 100px;
+        height: 100px;
+        font-size: 2em;
+        text-align: center;
+        line-height: 100px;
+        border: 2px solid #000;
+        cursor: pointer;
+        user-select: none;
+      }
+      #prediction {
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Gesture-Controlled Tic Tac Toe Game</h1>
+    <video id="webcam" width="224" height="224" autoplay muted></video>
+    <div id="prediction">Gesture: ...</div>
+    <div id="turn">Current Turn: X</div>
+    <div id="board"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
